@@ -1,38 +1,22 @@
-import { App, PluginSettingTab, Setting } from 'obsidian';
-import MyPlugin from './main';
+export type CategorizationMethod = 'thema' | 'iab';
 
-export interface MyPluginSettings {
-	mySetting: string;
+export interface NoteFilerSettings {
+	apiServerUrl: string;
+	/** Name of the secret in Obsidian's SecretStorage that holds the Typesafe API key. */
+	apiKeySecretName: string;
+	categorizedFolder: string;
+	categorizationMethod: CategorizationMethod;
+	categorizationDepth: number;
+	confidenceThreshold: number;
 }
 
-export const DEFAULT_SETTINGS: MyPluginSettings = {
-	mySetting: 'default',
+export const DEFAULT_API_SERVER_URL = 'https://api.typesafe.ai/v1/systemone';
+
+export const DEFAULT_SETTINGS: NoteFilerSettings = {
+	apiServerUrl: DEFAULT_API_SERVER_URL,
+	apiKeySecretName: '',
+	categorizedFolder: 'Categorized',
+	categorizationMethod: 'thema',
+	categorizationDepth: 2,
+	confidenceThreshold: 0.4,
 };
-
-export class SampleSettingTab extends PluginSettingTab {
-	plugin: MyPlugin;
-
-	constructor(app: App, plugin: MyPlugin) {
-		super(app, plugin);
-		this.plugin = plugin;
-	}
-
-	display(): void {
-		const { containerEl } = this;
-
-		containerEl.empty();
-
-		new Setting(containerEl)
-			.setName('Settings #1')
-			.setDesc("It's a secret")
-			.addText((text) =>
-				text
-					.setPlaceholder('Enter your secret')
-					.setValue(this.plugin.settings.mySetting)
-					.onChange(async (value) => {
-						this.plugin.settings.mySetting = value;
-						await this.plugin.saveSettings();
-					}),
-			);
-	}
-}

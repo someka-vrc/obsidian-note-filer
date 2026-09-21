@@ -4,6 +4,6 @@
 	"version": "1.0.0",
 	"minAppVersion": "1.11.4",
 	"description": "Categorize notes with Typesafe AI Jev and move them into folders that follow a standard taxonomy.",
-	"author": "そめか",
+	"author": "someka-vrc",
 	"isDesktopOnly": true
 }

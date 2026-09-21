@@ -165,13 +165,7 @@ Typesafe AI Jev を用いて、ファイル名と内容からノートの分類�
 
 ### 初期作業（サンプルプラグインからの置き換え）
 
-このリポジトリは Obsidian のサンプルプラグインが元になっている。実装の最初に次を本プラグイン用に置き換える。
-
-- `manifest.json`、`versions.json`: 更新済み。`id` は `note-filer`、フォルダ名は `obsidian-note-filer` のまま（`id` には `obsidian-` を付けない。他の多くのプラグインの慣例に合わせる）。`minAppVersion` は SecretStorage を使うため `1.11.4`。
-- `package.json`: `name`、`description` を変更する。
-- `LICENSE`: 著作権者の表記を変更する。
-- `src/main.ts`、`src/settings.ts`: サンプルのコード（リボンアイコン、サンプルモーダルなど）を削除し、本READMEの仕様に置き換える。
-- `AGENTS.md`: サンプル前提の記述を、本プラグインの概要（本READMEへの参照）と `src/` 配下のレイヤー構成に合わせて更新する。
+完了。`manifest.json`、`versions.json`、`package.json`、`LICENSE`、`AGENTS.md` を本プラグイン用に更新し、`src/main.ts`、`src/settings.ts` のサンプルコードを削除した。`id` は `note-filer`、フォルダ名は `obsidian-note-filer` のまま（`id` には `obsidian-` を付けない。他の多くのプラグインの慣例に合わせる）。`minAppVersion` は SecretStorage を使うため `1.11.4`。
 
 ## ライセンス
 

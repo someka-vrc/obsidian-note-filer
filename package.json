@@ -1,7 +1,7 @@
 {
-	"name": "obsidian-sample-plugin",
+	"name": "obsidian-note-filer",
 	"version": "1.0.0",
-	"description": "This is a sample plugin for Obsidian (https://obsidian.md)",
+	"description": "Categorize notes with Typesafe AI Jev and move them into folders that follow a standard taxonomy.",
 	"main": "main.js",
 	"type": "module",
 	"scripts": {
