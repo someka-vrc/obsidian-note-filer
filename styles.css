@@ -1,8 +1,185 @@
-/*
+/* Note Filer */
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
+/* Status bar */
+.note-filer-status {
+	display: flex;
+	align-items: center;
+	gap: var(--size-4-1);
+}
 
-If your plugin does not need CSS, delete this file.
+.note-filer-status-button {
+	display: inline-flex;
+	align-items: center;
+	cursor: var(--cursor);
+	border-radius: var(--radius-s);
+}
 
-*/
+.note-filer-status-button:hover {
+	color: var(--text-normal);
+}
+
+.note-filer-status-button:focus-visible {
+	box-shadow: 0 0 0 2px var(--background-modifier-border-focus);
+}
+
+.note-filer-status-button.is-disabled {
+	cursor: default;
+	opacity: 0.6;
+}
+
+.note-filer-status-button .svg-icon {
+	width: var(--icon-s);
+	height: var(--icon-s);
+}
+
+.note-filer-status-progress {
+	width: 80px;
+	height: 6px;
+	accent-color: var(--interactive-accent);
+}
+
+.note-filer-hidden {
+	display: none;
+}
+
+/* Categorization view */
+.modal.note-filer-modal {
+	width: 960px;
+	max-width: 90vw;
+}
+
+.note-filer-list {
+	max-height: 60vh;
+	overflow-y: auto;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: var(--radius-m);
+}
+
+.note-filer-row {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	align-items: center;
+	gap: var(--size-4-3);
+	padding: var(--size-4-2) var(--size-4-3);
+	border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.note-filer-row:last-child {
+	border-bottom: none;
+}
+
+.note-filer-row-body {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-2-1);
+	min-width: 0;
+}
+
+.note-filer-row-top {
+	display: flex;
+	align-items: center;
+	gap: var(--size-4-2);
+	min-width: 0;
+}
+
+.note-filer-file-name {
+	flex: 1 1 auto;
+	min-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-weight: var(--font-semibold);
+}
+
+.note-filer-candidate {
+	flex: 0 1 300px;
+	min-width: 0;
+	max-width: 50%;
+}
+
+.note-filer-error-label {
+	flex: 0 0 auto;
+	padding: 0 var(--size-4-2);
+	border: 1px solid var(--text-error);
+	border-radius: var(--radius-s);
+	color: var(--text-error);
+	font-size: var(--font-ui-smaller);
+}
+
+.note-filer-row-paths {
+	display: flex;
+	align-items: center;
+	gap: var(--size-4-2);
+	min-width: 0;
+	color: var(--text-muted);
+	font-size: var(--font-ui-small);
+}
+
+.note-filer-path {
+	flex: 1 1 0;
+	min-width: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.note-filer-path.is-destination {
+	color: var(--text-normal);
+}
+
+.note-filer-path-arrow {
+	flex: 0 0 auto;
+}
+
+.note-filer-row-warning {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: var(--text-error);
+	font-size: var(--font-ui-small);
+}
+
+.note-filer-row-warning.is-empty {
+	display: none;
+}
+
+.note-filer-row-actions {
+	display: flex;
+	gap: var(--size-4-2);
+}
+
+.note-filer-modal.is-busy .note-filer-row-actions,
+.note-filer-modal.is-busy .note-filer-footer button {
+	pointer-events: none;
+	opacity: 0.6;
+}
+
+.note-filer-footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-items: center;
+	gap: var(--size-4-3);
+	margin-top: var(--size-4-3);
+}
+
+.note-filer-footer-item {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--size-4-2);
+	color: var(--text-muted);
+	font-size: var(--font-ui-small);
+}
+
+.note-filer-threshold {
+	width: 5em;
+}
+
+/* Settings */
+.note-filer-wide-input {
+	width: 280px;
+}
+
+input.note-filer-invalid {
+	border-color: var(--text-error);
+}

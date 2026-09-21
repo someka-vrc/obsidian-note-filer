@@ -34,6 +34,14 @@ npm run taxonomy
 
 Converts `assets/raw/*` into `src/taxonomy/data/*.json` (see `scripts/build-taxonomy.mjs` and the README). The generated JSON is committed. Do not edit it by hand.
 
+### Test
+
+```bash
+npm test
+```
+
+Runs the unit tests (vitest, `src/**/*.test.ts`). Keep logic that does not need the Obsidian API in plain modules (`taxonomy/`, `categorizer/`, `ui/rowState.ts`) and test it there.
+
 ### Production build
 
 ```bash

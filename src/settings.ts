@@ -1,4 +1,4 @@
-export type CategorizationMethod = 'thema' | 'iab';
+import type { CategorizationMethod } from './taxonomy/types';
 
 export interface NoteFilerSettings {
 	apiServerUrl: string;
