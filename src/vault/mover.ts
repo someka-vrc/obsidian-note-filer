@@ -8,6 +8,21 @@ export function destinationFolder(root: string, labels: string[]): string {
 		.join('/');
 }
 
+/**
+ * Normalizes a folder path typed in the settings: no leading, trailing or repeated slashes.
+ * The empty string is the vault root. Returns null when the text cannot be a folder path.
+ */
+export function parseFolderSetting(input: string): string | null {
+	const segments = input
+		.split('/')
+		.map((segment) => segment.trim())
+		.filter((segment) => segment !== '');
+	if (segments.some((segment) => /[\\:*?"<>|]/.test(segment) || segment === '.' || segment === '..')) {
+		return null;
+	}
+	return segments.join('/');
+}
+
 export function destinationPath(folder: string, fileName: string): string {
 	return folder === '' ? fileName : `${folder}/${fileName}`;
 }

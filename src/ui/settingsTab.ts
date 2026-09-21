@@ -1,9 +1,11 @@
 import { PluginSettingTab, SecretComponent, Setting } from 'obsidian';
 import type { App } from 'obsidian';
 import type NoteFilerPlugin from '../main';
-import { DEFAULT_API_SERVER_URL } from '../settings';
+import { DEFAULT_API_SERVER_URL, parseDepthSetting } from '../settings';
 import { METHOD_DISPLAY_NAMES } from '../taxonomy/types';
 import type { CategorizationMethod } from '../taxonomy/types';
+import { parseFolderSetting } from '../vault/mover';
+import { FolderSuggest } from './folderSuggest';
 import { parseThreshold } from './rowState';
 
 export class NoteFilerSettingTab extends PluginSettingTab {
@@ -58,7 +60,7 @@ export class NoteFilerSettingTab extends PluginSettingTab {
 	private addApiKey(containerEl: HTMLElement): void {
 		new Setting(containerEl)
 			.setName('Typesafe API key')
-			.setDesc('Select a secret that holds the API key. Only the name of the secret is saved in the plugin settings.')
+			.setDesc('Select a secret that holds the API key.')
 			.addComponent((el) =>
 				new SecretComponent(this.app, el)
 					.setValue(this.plugin.settings.apiKeySecretName)
@@ -70,26 +72,31 @@ export class NoteFilerSettingTab extends PluginSettingTab {
 	}
 
 	private addCategorizedFolder(containerEl: HTMLElement): void {
-		const current = this.plugin.settings.categorizedFolder;
-		const paths = this.app.vault
-			.getAllFolders(false)
-			.map((folder) => folder.path)
-			.sort((a, b) => a.localeCompare(b));
 		new Setting(containerEl)
 			.setName('Categorized folder')
-			.setDesc('Root folder for the categorized notes. Missing folders are created when notes are moved.')
-			.addDropdown((dropdown) => {
-				dropdown.addOption('', 'Vault root');
-				for (const path of paths) {
-					dropdown.addOption(path, path);
-				}
-				// Keep a folder that does not exist yet selectable, so the current value is not lost.
-				if (current !== '' && !paths.includes(current)) {
-					dropdown.addOption(current, `${current} (not created yet)`);
-				}
-				dropdown.setValue(current).onChange(async (value) => {
-					this.plugin.settings.categorizedFolder = value;
-					await this.save();
+			.setDesc(
+				'Root folder for the categorized notes.',
+			)
+			.addSearch((search) => {
+				const inputEl = search.inputEl;
+				search.setPlaceholder('Vault root').setValue(this.plugin.settings.categorizedFolder);
+				const suggest = new FolderSuggest(this.app, inputEl);
+				suggest.onSelect((folder) => {
+					suggest.setValue(folder.path);
+					inputEl.dispatchEvent(new Event('input'));
+					suggest.close();
+				});
+				inputEl.addEventListener('input', () => {
+					const value = parseFolderSetting(inputEl.value);
+					inputEl.toggleClass('note-filer-invalid', value === null);
+					if (value !== null) {
+						this.plugin.settings.categorizedFolder = value;
+						void this.save();
+					}
+				});
+				inputEl.addEventListener('blur', () => {
+					inputEl.value = this.plugin.settings.categorizedFolder;
+					inputEl.toggleClass('note-filer-invalid', false);
 				});
 			});
 	}
@@ -113,16 +120,16 @@ export class NoteFilerSettingTab extends PluginSettingTab {
 		new Setting(containerEl)
 			.setName('Categorization depth')
 			.setDesc(
-				'How many levels of the taxonomy to categorize. Use a whole number of 1 or more. If the taxonomy has fewer levels, notes are categorized down to the deepest level.',
+				'How many levels of the taxonomy to categorize. Use a whole number of 1 or more, or 0 for no limit. If the taxonomy has fewer levels, notes are categorized down to the deepest level.',
 			)
 			.addText((text) => {
 				text.inputEl.type = 'number';
-				text.inputEl.min = '1';
+				text.inputEl.min = '0';
 				text.inputEl.step = '1';
 				this.bindNumberInput(
 					text.inputEl,
 					() => this.plugin.settings.categorizationDepth,
-					(input) => (/^\d+$/.test(input.trim()) && Number(input) >= 1 ? Number(input) : null),
+					parseDepthSetting,
 					async (value) => {
 						this.plugin.settings.categorizationDepth = value;
 						await this.save();

@@ -6,8 +6,25 @@ export interface NoteFilerSettings {
 	apiKeySecretName: string;
 	categorizedFolder: string;
 	categorizationMethod: CategorizationMethod;
+	/** How many levels to categorize; 0 means no limit. */
 	categorizationDepth: number;
 	confidenceThreshold: number;
+}
+
+/**
+ * Turns the text of the depth input into the saved value.
+ * An empty text, zero or a negative number mean no limit and are saved as 0.
+ * Returns null when the text is not a whole number.
+ */
+export function parseDepthSetting(text: string): number | null {
+	const trimmed = text.trim();
+	if (trimmed === '') {
+		return 0;
+	}
+	if (!/^-?\d+$/.test(trimmed)) {
+		return null;
+	}
+	return Math.max(0, Number(trimmed));
 }
 
 export const DEFAULT_API_SERVER_URL = 'https://api.typesafe.ai/v1/systemone';

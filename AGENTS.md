@@ -109,6 +109,10 @@ npm run build
     ```
 - Reload Obsidian and enable the plugin in **Settings → Community plugins**.
 
+### Local deploy (personal, not for release)
+
+This repo lives in a dev folder. `npm run local:deploy` builds and copies the plugin files (`main.js`, `manifest.json`, `styles.css`) into a real vault, then touches `.hotreload` for the Hot Reload plugin. The destination is kept out of git: copy `.env.example` to `.env` (gitignored) and set `OBSIDIAN_PLUGIN_DIR` (e.g. `...\.obsidian\plugins\obsidian-note-filer`).
+
 ## Commands & settings
 
 - Any user-facing commands should be added via `this.addCommand(...)`.

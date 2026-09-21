@@ -92,6 +92,22 @@ describe('categorizeNote', () => {
 		expect(result.parents).toEqual([{ code: 'A', label: 'Arts' }]);
 	});
 
+	it.each([0, -1])('descends to the deepest level when depth is %i (no limit)', async (depth) => {
+		const { client, asked } = fakeClient([
+			{ A: 0.7, B: 0.2, other: 0.1 },
+			{ AB: 0.1, AC: 0.8, other: 0.1 },
+			{ ACA: 1 },
+		]);
+		const result = await categorizeNote(input, { method: 'thema', taxonomy, depth }, client);
+
+		expect(asked).toHaveLength(3);
+		expect(result.parents).toEqual([
+			{ code: 'A', label: 'Arts' },
+			{ code: 'AC', label: 'Painting' },
+		]);
+		expect(result.candidates.map((c) => c.code)).toEqual(['ACA']);
+	});
+
 	it('fails when only Other has probability', async () => {
 		const { client } = fakeClient([{ other: 1 }]);
 		await expect(

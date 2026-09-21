@@ -21,7 +21,7 @@ Typesafe AI Jev を用いて、ファイル名と内容からノートの分類�
   - `Categorization Method`: 分類法を指定する。
     - `Thema`: [EDItEUR](https://www.editeur.org/2/About/) が公開している刊行物分類体系。
     - `IAB Contents Taxonomy`: [IAB Tech Lab](https://www.iab.com/) が公開しているWebコンテンツ分類の国際標準。
-  - `Categorization Depth`: 分類法の階層のうち、どの深さまで分類するかを指定する。1以上の整数値を指定する。分類法の階層数を超える場合は最下層まで分類する。デフォルト: 2
+  - `Categorization Depth`: 分類法の階層のうち、どの深さまで分類するかを指定する。1以上の整数値を指定する。0を指定すると（実装上は、空欄または0以下も）深さを制限せず、最下層まで分類する。分類法の階層数を超える場合も最下層まで分類する。デフォルト: 2
   - `Confidence Threshold`: 分類候補の自信度の閾値を指定する。分類実行画面で使用し、設定画面でもこの画面でも変更可能。0.0 から 1.0 の範囲で指定する。デフォルト: 0.4
 
 ### 外部サービスへの送信
@@ -71,7 +71,7 @@ Typesafe AI Jev を用いて、ファイル名と内容からノートの分類�
 #### 設定UI
 
 - `Typesafe API Key` は Obsidian の SecretStorage（`SecretComponent`）を使って保管する。設定（`data.json`）には、シークレットの名前だけを保存する。APIキーが必要なときは `app.secretStorage.getSecret(名前)` で取得する。
-- `Categorized Folder` は選択可能なフォルダリストから選択する。
+- `Categorized Folder` は、Obsidian 標準の入力補完（`AbstractInputSuggest`）で既存のフォルダを候補に表示する。候補から選ぶほか、未作成のフォルダ名も入力できる（作成は移動時）。空欄は vault のルート。パスに使えない文字を含む入力は保存しない。
 
 #### 移動
 
@@ -142,6 +142,8 @@ Typesafe AI Jev を用いて、ファイル名と内容からノートの分類�
 
 `D:\develop\workspace\jev-poc` で事前にJevを検証した結果 `D:\develop\workspace\jev-poc\reports\recommendation_single_level.md` を参考にする。
 
+APIキーについては Infisical で `TYPESAFE_API_KEY` を注入可能。Infisicalの詳細はスキル参照。
+
 ##### 分類の進め方
 
 - 1階層ずつ質問する。1階層目の質問（選択肢はトップ階層のカテゴリ）の回答を受けて、その回答カテゴリの子を選択肢とする2階層目の質問をする。これを `Categorization Depth` の階層まで繰り返す。各階層の回答は、`Other` を除いて確率が最も高いカテゴリを採用する。
@@ -166,6 +168,22 @@ Typesafe AI Jev を用いて、ファイル名と内容からノートの分類�
 ### 初期作業（サンプルプラグインからの置き換え）
 
 完了。`manifest.json`、`versions.json`、`package.json`、`LICENSE`、`AGENTS.md` を本プラグイン用に更新し、`src/main.ts`、`src/settings.ts` のサンプルコードを削除した。`id` は `note-filer`、フォルダ名は `obsidian-note-filer` のまま（`id` には `obsidian-` を付けない。他の多くのプラグインの慣例に合わせる）。`minAppVersion` は SecretStorage を使うため `1.11.4`。
+
+## 開発
+
+### ローカルデプロイ
+
+`local:deploy` スクリプトで、ビルド後に必要なファイル（`main.js` / `manifest.json` / `styles.css`）だけを手元の Obsidian Vault のプラグインフォルダへコピーできます。
+
+1. `.env.example` を `.env` にコピーする
+2. `.env` の `OBSIDIAN_PLUGIN_DIR` を自分の Vault のプラグインフォルダのパスに書き換える（例: `D:\Vault\.obsidian\plugins\obsidian-note-filer`）
+3. 以下を実行する
+
+   ```sh
+   npm run local:deploy
+   ```
+
+`.env` はパスが環境ごとに異なり、Git にコミットすべきでないため `.gitignore` で除外しています。
 
 ## ライセンス
 

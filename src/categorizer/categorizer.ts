@@ -7,7 +7,7 @@ import type { CategorizationMethod, Taxonomy, TaxonomyNode } from '../taxonomy/t
 export interface CategorizeOptions {
 	method: CategorizationMethod;
 	taxonomy: Taxonomy;
-	/** How many levels to descend; a positive integer. */
+	/** How many levels to descend. Zero or less means no limit: descend until a category has no children. */
 	depth: number;
 }
 
@@ -22,7 +22,7 @@ export async function categorizeNote(
 	client: JevAsker,
 	signal?: AbortSignal,
 ): Promise<Categorization> {
-	const depth = Math.max(1, Math.floor(options.depth));
+	const depth = options.depth >= 1 ? Math.floor(options.depth) : Infinity;
 	const parents: CategoryRef[] = [];
 	let parent: TaxonomyNode | null = null;
 
