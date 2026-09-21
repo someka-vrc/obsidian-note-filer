@@ -1,0 +1,2992 @@
+{
+  "root": {
+    "children": [
+      {
+        "code": "150",
+        "label": "Attractions",
+        "children": [
+          {
+            "code": "151",
+            "label": "Amusement and Theme Parks"
+          },
+          {
+            "code": "179",
+            "label": "Bars and Restaurants"
+          },
+          {
+            "code": "181",
+            "label": "Casinos and Gambling"
+          },
+          {
+            "code": "153",
+            "label": "Historic Site and Landmark Tours"
+          },
+          {
+            "code": "154",
+            "label": "Malls and Shopping Centers"
+          },
+          {
+            "code": "155",
+            "label": "Museums and Galleries"
+          },
+          {
+            "code": "158",
+            "label": "Nightclubs"
+          },
+          {
+            "code": "159",
+            "label": "Outdoor Activities"
+          },
+          {
+            "code": "160",
+            "label": "Parks and Nature"
+          },
+          {
+            "code": "177",
+            "label": "Theater Venues"
+          },
+          {
+            "code": "178",
+            "label": "Zoos and Aquariums"
+          }
+        ]
+      },
+      {
+        "code": "1",
+        "label": "Automotive",
+        "children": [
+          {
+            "code": "2",
+            "label": "Auto Body Styles",
+            "children": [
+              {
+                "code": "3",
+                "label": "Commercial Trucks"
+              },
+              {
+                "code": "8",
+                "label": "Convertible"
+              },
+              {
+                "code": "9",
+                "label": "Coupe"
+              },
+              {
+                "code": "10",
+                "label": "Crossover"
+              },
+              {
+                "code": "11",
+                "label": "Hatchback"
+              },
+              {
+                "code": "12",
+                "label": "Microcar"
+              },
+              {
+                "code": "13",
+                "label": "Minivan"
+              },
+              {
+                "code": "14",
+                "label": "Off-Road Vehicles"
+              },
+              {
+                "code": "15",
+                "label": "Pickup Trucks"
+              },
+              {
+                "code": "4",
+                "label": "Sedan"
+              },
+              {
+                "code": "5",
+                "label": "Station Wagon"
+              },
+              {
+                "code": "6",
+                "label": "SUV"
+              },
+              {
+                "code": "7",
+                "label": "Van"
+              }
+            ]
+          },
+          {
+            "code": "30",
+            "label": "Auto Buying and Selling"
+          },
+          {
+            "code": "31",
+            "label": "Auto Insurance"
+          },
+          {
+            "code": "32",
+            "label": "Auto Parts"
+          },
+          {
+            "code": "33",
+            "label": "Auto Recalls"
+          },
+          {
+            "code": "41",
+            "label": "Auto Rentals"
+          },
+          {
+            "code": "34",
+            "label": "Auto Repair"
+          },
+          {
+            "code": "35",
+            "label": "Auto Safety"
+          },
+          {
+            "code": "36",
+            "label": "Auto Shows"
+          },
+          {
+            "code": "37",
+            "label": "Auto Technology",
+            "children": [
+              {
+                "code": "38",
+                "label": "Auto Infotainment Technologies"
+              },
+              {
+                "code": "39",
+                "label": "Auto Navigation Systems"
+              },
+              {
+                "code": "40",
+                "label": "Auto Safety Technologies"
+              }
+            ]
+          },
+          {
+            "code": "16",
+            "label": "Auto Type",
+            "children": [
+              {
+                "code": "17",
+                "label": "Budget Cars"
+              },
+              {
+                "code": "18",
+                "label": "Certified Pre-Owned Cars"
+              },
+              {
+                "code": "19",
+                "label": "Classic Cars"
+              },
+              {
+                "code": "20",
+                "label": "Concept Cars"
+              },
+              {
+                "code": "21",
+                "label": "Driverless Cars"
+              },
+              {
+                "code": "22",
+                "label": "Green Vehicles"
+              },
+              {
+                "code": "23",
+                "label": "Luxury Cars"
+              },
+              {
+                "code": "24",
+                "label": "Performance Cars"
+              }
+            ]
+          },
+          {
+            "code": "25",
+            "label": "Car Culture"
+          },
+          {
+            "code": "26",
+            "label": "Dash Cam Videos"
+          },
+          {
+            "code": "27",
+            "label": "Motorcycles"
+          },
+          {
+            "code": "28",
+            "label": "Road-Side Assistance"
+          },
+          {
+            "code": "29",
+            "label": "Scooters"
+          }
+        ]
+      },
+      {
+        "code": "42",
+        "label": "Books and Literature",
+        "children": [
+          {
+            "code": "43",
+            "label": "Art and Photography"
+          },
+          {
+            "code": "46",
+            "label": "Comics and Graphic Novels"
+          },
+          {
+            "code": "48",
+            "label": "Fiction"
+          },
+          {
+            "code": "49",
+            "label": "Poetry"
+          }
+        ]
+      },
+      {
+        "code": "52",
+        "label": "Business and Finance",
+        "children": [
+          {
+            "code": "53",
+            "label": "Business",
+            "children": [
+              {
+                "code": "54",
+                "label": "Business Accounting and Finance"
+              },
+              {
+                "code": "62",
+                "label": "Business Administration"
+              },
+              {
+                "code": "63",
+                "label": "Business Banking and Finance",
+                "children": [
+                  {
+                    "code": "64",
+                    "label": "Angel Investment"
+                  },
+                  {
+                    "code": "65",
+                    "label": "Bankruptcy"
+                  },
+                  {
+                    "code": "66",
+                    "label": "Business Loans"
+                  },
+                  {
+                    "code": "67",
+                    "label": "Debt Factoring and Invoice Discounting"
+                  },
+                  {
+                    "code": "68",
+                    "label": "Mergers and Acquisitions"
+                  },
+                  {
+                    "code": "69",
+                    "label": "Private Equity"
+                  },
+                  {
+                    "code": "70",
+                    "label": "Sale and Lease Back"
+                  },
+                  {
+                    "code": "71",
+                    "label": "Venture Capital"
+                  }
+                ]
+              },
+              {
+                "code": "72",
+                "label": "Business I.T"
+              },
+              {
+                "code": "73",
+                "label": "Business Operations"
+              },
+              {
+                "code": "79",
+                "label": "Business Utilities"
+              },
+              {
+                "code": "74",
+                "label": "Consumer Issues",
+                "children": [
+                  {
+                    "code": "75",
+                    "label": "Recalls"
+                  }
+                ]
+              },
+              {
+                "code": "76",
+                "label": "Executive Leadership and Management"
+              },
+              {
+                "code": "77",
+                "label": "Government Business"
+              },
+              {
+                "code": "78",
+                "label": "Green Solutions"
+              },
+              {
+                "code": "55",
+                "label": "Human Resources"
+              },
+              {
+                "code": "56",
+                "label": "Large Business"
+              },
+              {
+                "code": "57",
+                "label": "Logistics"
+              },
+              {
+                "code": "58",
+                "label": "Marketing and Advertising"
+              },
+              {
+                "code": "59",
+                "label": "Sales"
+              },
+              {
+                "code": "60",
+                "label": "Small and Medium-sized Business"
+              },
+              {
+                "code": "61",
+                "label": "Startups"
+              }
+            ]
+          },
+          {
+            "code": "80",
+            "label": "Economy",
+            "children": [
+              {
+                "code": "81",
+                "label": "Commodities"
+              },
+              {
+                "code": "82",
+                "label": "Currencies"
+              },
+              {
+                "code": "83",
+                "label": "Financial Crisis"
+              },
+              {
+                "code": "84",
+                "label": "Financial Reform"
+              },
+              {
+                "code": "85",
+                "label": "Financial Regulation"
+              },
+              {
+                "code": "86",
+                "label": "Gasoline Prices"
+              },
+              {
+                "code": "87",
+                "label": "Housing Market"
+              },
+              {
+                "code": "88",
+                "label": "Interest Rates"
+              },
+              {
+                "code": "89",
+                "label": "Job Market"
+              }
+            ]
+          },
+          {
+            "code": "90",
+            "label": "Industries",
+            "children": [
+              {
+                "code": "91",
+                "label": "Advertising Industry"
+              },
+              {
+                "code": "102",
+                "label": "Agriculture"
+              },
+              {
+                "code": "113",
+                "label": "Apparel Industry"
+              },
+              {
+                "code": "117",
+                "label": "Automotive Industry"
+              },
+              {
+                "code": "118",
+                "label": "Aviation Industry"
+              },
+              {
+                "code": "119",
+                "label": "Biotech and Biomedical Industry"
+              },
+              {
+                "code": "120",
+                "label": "Civil Engineering Industry"
+              },
+              {
+                "code": "121",
+                "label": "Construction Industry"
+              },
+              {
+                "code": "122",
+                "label": "Defense Industry"
+              },
+              {
+                "code": "92",
+                "label": "Education industry"
+              },
+              {
+                "code": "93",
+                "label": "Entertainment Industry"
+              },
+              {
+                "code": "94",
+                "label": "Environmental Services Industry"
+              },
+              {
+                "code": "95",
+                "label": "Financial Industry"
+              },
+              {
+                "code": "96",
+                "label": "Food Industry"
+              },
+              {
+                "code": "97",
+                "label": "Healthcare Industry"
+              },
+              {
+                "code": "98",
+                "label": "Hospitality Industry"
+              },
+              {
+                "code": "99",
+                "label": "Information Services Industry"
+              },
+              {
+                "code": "100",
+                "label": "Legal Services Industry"
+              },
+              {
+                "code": "101",
+                "label": "Logistics and Transportation Industry"
+              },
+              {
+                "code": "103",
+                "label": "Management Consulting Industry"
+              },
+              {
+                "code": "104",
+                "label": "Manufacturing Industry"
+              },
+              {
+                "code": "105",
+                "label": "Mechanical and Industrial Engineering Industry"
+              },
+              {
+                "code": "106",
+                "label": "Media Industry"
+              },
+              {
+                "code": "107",
+                "label": "Metals Industry"
+              },
+              {
+                "code": "108",
+                "label": "Non-Profit Organizations"
+              },
+              {
+                "code": "109",
+                "label": "Pharmaceutical Industry"
+              },
+              {
+                "code": "110",
+                "label": "Power and Energy Industry"
+              },
+              {
+                "code": "111",
+                "label": "Publishing Industry"
+              },
+              {
+                "code": "112",
+                "label": "Real Estate Industry"
+              },
+              {
+                "code": "114",
+                "label": "Retail Industry"
+              },
+              {
+                "code": "115",
+                "label": "Technology Industry"
+              },
+              {
+                "code": "116",
+                "label": "Telecommunications Industry"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "code": "123",
+        "label": "Careers",
+        "children": [
+          {
+            "code": "124",
+            "label": "Apprenticeships"
+          },
+          {
+            "code": "125",
+            "label": "Career Advice"
+          },
+          {
+            "code": "126",
+            "label": "Career Planning"
+          },
+          {
+            "code": "127",
+            "label": "Job Search",
+            "children": [
+              {
+                "code": "128",
+                "label": "Job Fairs"
+              },
+              {
+                "code": "129",
+                "label": "Resume Writing and Advice"
+              }
+            ]
+          },
+          {
+            "code": "130",
+            "label": "Remote Working"
+          },
+          {
+            "code": "131",
+            "label": "Vocational Training"
+          }
+        ]
+      },
+      {
+        "code": "80DV8O",
+        "label": "Communication"
+      },
+      {
+        "code": "380",
+        "label": "Crime"
+      },
+      {
+        "code": "381",
+        "label": "Disasters"
+      },
+      {
+        "code": "132",
+        "label": "Education",
+        "children": [
+          {
+            "code": "133",
+            "label": "Adult Education"
+          },
+          {
+            "code": "137",
+            "label": "College Education",
+            "children": [
+              {
+                "code": "138",
+                "label": "College Planning"
+              },
+              {
+                "code": "139",
+                "label": "Postgraduate Education",
+                "children": [
+                  {
+                    "code": "140",
+                    "label": "Professional School"
+                  }
+                ]
+              },
+              {
+                "code": "141",
+                "label": "Undergraduate Education"
+              }
+            ]
+          },
+          {
+            "code": "142",
+            "label": "Early Childhood Education"
+          },
+          {
+            "code": "143",
+            "label": "Educational Assessment",
+            "children": [
+              {
+                "code": "144",
+                "label": "Standardized Testing"
+              }
+            ]
+          },
+          {
+            "code": "145",
+            "label": "Homeschooling"
+          },
+          {
+            "code": "146",
+            "label": "Homework and Study"
+          },
+          {
+            "code": "147",
+            "label": "Language Learning"
+          },
+          {
+            "code": "148",
+            "label": "Online Education"
+          },
+          {
+            "code": "149",
+            "label": "Primary Education"
+          },
+          {
+            "code": "134",
+            "label": "Private School"
+          },
+          {
+            "code": "135",
+            "label": "Secondary Education"
+          },
+          {
+            "code": "136",
+            "label": "Special Education"
+          }
+        ]
+      },
+      {
+        "code": "JLBCU7",
+        "label": "Entertainment",
+        "children": [
+          {
+            "code": "324",
+            "label": "Movies"
+          },
+          {
+            "code": "338",
+            "label": "Music",
+            "children": [
+              {
+                "code": "342",
+                "label": "Adult Album Alternative"
+              },
+              {
+                "code": "339",
+                "label": "Adult Contemporary Music",
+                "children": [
+                  {
+                    "code": "340",
+                    "label": "Soft AC Music"
+                  },
+                  {
+                    "code": "341",
+                    "label": "Urban AC Music"
+                  }
+                ]
+              },
+              {
+                "code": "343",
+                "label": "Alternative Music"
+              },
+              {
+                "code": "360",
+                "label": "Blues"
+              },
+              {
+                "code": "344",
+                "label": "Children's Music"
+              },
+              {
+                "code": "345",
+                "label": "Classic Hits"
+              },
+              {
+                "code": "346",
+                "label": "Classical Music"
+              },
+              {
+                "code": "347",
+                "label": "College Radio"
+              },
+              {
+                "code": "348",
+                "label": "Comedy (Music and Audio)"
+              },
+              {
+                "code": "349",
+                "label": "Contemporary Hits Pop Top 40"
+              },
+              {
+                "code": "350",
+                "label": "Country Music"
+              },
+              {
+                "code": "351",
+                "label": "Dance and Electronic Music"
+              },
+              {
+                "code": "354",
+                "label": "Gospel Music"
+              },
+              {
+                "code": "355",
+                "label": "Hip Hop Music"
+              },
+              {
+                "code": "356",
+                "label": "Inspirational New Age Music"
+              },
+              {
+                "code": "357",
+                "label": "Jazz"
+              },
+              {
+                "code": "358",
+                "label": "Oldies Adult Standards"
+              },
+              {
+                "code": "362",
+                "label": "R and B Soul Funk"
+              },
+              {
+                "code": "359",
+                "label": "Reggae"
+              },
+              {
+                "code": "361",
+                "label": "Religious (Music and Audio)"
+              },
+              {
+                "code": "363",
+                "label": "Rock Music",
+                "children": [
+                  {
+                    "code": "364",
+                    "label": "Album-oriented Rock"
+                  },
+                  {
+                    "code": "365",
+                    "label": "Alternative Rock"
+                  },
+                  {
+                    "code": "366",
+                    "label": "Classic Rock"
+                  },
+                  {
+                    "code": "367",
+                    "label": "Hard Rock"
+                  },
+                  {
+                    "code": "368",
+                    "label": "Soft Rock"
+                  }
+                ]
+              },
+              {
+                "code": "353",
+                "label": "Songwriters Folk"
+              },
+              {
+                "code": "369",
+                "label": "Soundtracks, TV and Showtunes"
+              },
+              {
+                "code": "352",
+                "label": "World International Music"
+              },
+              {
+                "code": "377",
+                "label": "Urban Contemporary Music"
+              },
+              {
+                "code": "378",
+                "label": "Variety (Music and Audio)"
+              }
+            ]
+          },
+          {
+            "code": "640",
+            "label": "Television"
+          }
+        ]
+      },
+      {
+        "code": "8VZQHL",
+        "label": "Events",
+        "children": [
+          {
+            "code": "162",
+            "label": "Awards Shows"
+          },
+          {
+            "code": "180",
+            "label": "Business Expos and Conferences"
+          },
+          {
+            "code": "185",
+            "label": "Fan Conventions"
+          }
+        ]
+      },
+      {
+        "code": "186",
+        "label": "Family and Relationships",
+        "children": [
+          {
+            "code": "187",
+            "label": "Bereavement"
+          },
+          {
+            "code": "188",
+            "label": "Dating"
+          },
+          {
+            "code": "189",
+            "label": "Divorce"
+          },
+          {
+            "code": "190",
+            "label": "Eldercare"
+          },
+          {
+            "code": "191",
+            "label": "Marriage and Civil Unions"
+          },
+          {
+            "code": "192",
+            "label": "Parenting",
+            "children": [
+              {
+                "code": "193",
+                "label": "Adoption and Fostering"
+              },
+              {
+                "code": "194",
+                "label": "Daycare and Pre-School"
+              },
+              {
+                "code": "195",
+                "label": "Internet Safety"
+              },
+              {
+                "code": "196",
+                "label": "Parenting Babies and Toddlers"
+              },
+              {
+                "code": "197",
+                "label": "Parenting Children Aged 4-11"
+              },
+              {
+                "code": "198",
+                "label": "Parenting Teens"
+              },
+              {
+                "code": "199",
+                "label": "Special Needs Kids"
+              }
+            ]
+          },
+          {
+            "code": "200",
+            "label": "Single Life"
+          }
+        ]
+      },
+      {
+        "code": "201",
+        "label": "Fine Art",
+        "children": [
+          {
+            "code": "202",
+            "label": "Costume"
+          },
+          {
+            "code": "203",
+            "label": "Dance"
+          },
+          {
+            "code": "204",
+            "label": "Design"
+          },
+          {
+            "code": "205",
+            "label": "Digital Arts"
+          },
+          {
+            "code": "206",
+            "label": "Fine Art Photography"
+          },
+          {
+            "code": "207",
+            "label": "Modern Art"
+          },
+          {
+            "code": "208",
+            "label": "Opera"
+          },
+          {
+            "code": "209",
+            "label": "Theater"
+          }
+        ]
+      },
+      {
+        "code": "210",
+        "label": "Food and Drink",
+        "children": [
+          {
+            "code": "211",
+            "label": "Alcoholic Beverages"
+          },
+          {
+            "code": "215",
+            "label": "Barbecues and Grilling"
+          },
+          {
+            "code": "216",
+            "label": "Cooking"
+          },
+          {
+            "code": "217",
+            "label": "Desserts and Baking"
+          },
+          {
+            "code": "218",
+            "label": "Dining Out"
+          },
+          {
+            "code": "219",
+            "label": "Food Allergies"
+          },
+          {
+            "code": "220",
+            "label": "Food Movements"
+          },
+          {
+            "code": "221",
+            "label": "Healthy Cooking and Eating"
+          },
+          {
+            "code": "222",
+            "label": "Non-Alcoholic Beverages"
+          },
+          {
+            "code": "212",
+            "label": "Vegan Diets"
+          },
+          {
+            "code": "213",
+            "label": "Vegetarian Diets"
+          },
+          {
+            "code": "214",
+            "label": "World Cuisines"
+          }
+        ]
+      },
+      {
+        "code": "SPSHQ5",
+        "label": "Genres",
+        "children": [
+          {
+            "code": "VKIV56",
+            "label": "Nature"
+          },
+          {
+            "code": "325",
+            "label": "Action Adventure"
+          },
+          {
+            "code": "641",
+            "label": "Animation and Anime"
+          },
+          {
+            "code": "44",
+            "label": "Biographies"
+          },
+          {
+            "code": "646",
+            "label": "Comedy"
+          },
+          {
+            "code": "332",
+            "label": "Documentary"
+          },
+          {
+            "code": "647",
+            "label": "Drama"
+          },
+          {
+            "code": "648",
+            "label": "Factual"
+          },
+          {
+            "code": "645",
+            "label": "Family Children"
+          },
+          {
+            "code": "335",
+            "label": "Fantasy"
+          },
+          {
+            "code": "EZWB7V",
+            "label": "History"
+          },
+          {
+            "code": "649",
+            "label": "Holiday"
+          },
+          {
+            "code": "336",
+            "label": "Horror"
+          },
+          {
+            "code": "TIFQA5",
+            "label": "Lifestyle"
+          },
+          {
+            "code": "650",
+            "label": "Music Video"
+          },
+          {
+            "code": "156",
+            "label": "Musical"
+          },
+          {
+            "code": "331",
+            "label": "Mystery"
+          },
+          {
+            "code": "651",
+            "label": "Reality TV"
+          },
+          {
+            "code": "326",
+            "label": "Romance"
+          },
+          {
+            "code": "652",
+            "label": "Science Fiction"
+          },
+          {
+            "code": "642",
+            "label": "Soap Opera"
+          },
+          {
+            "code": "643",
+            "label": "Special Interest (Indie Art House)"
+          },
+          {
+            "code": "370",
+            "label": "Sports Radio"
+          },
+          {
+            "code": "371",
+            "label": "Talk Radio"
+          },
+          {
+            "code": "376",
+            "label": "Public Radio"
+          },
+          {
+            "code": "A0AH3G",
+            "label": "Talk Show"
+          },
+          {
+            "code": "KHPC5A",
+            "label": "True Crime"
+          },
+          {
+            "code": "KHPC6A",
+            "label": "Western"
+          },
+          {
+            "code": "51",
+            "label": "Young Adult"
+          },
+          {
+            "code": "700",
+            "label": "Thriller"
+          }
+        ]
+      },
+      {
+        "code": "223",
+        "label": "Healthy Living",
+        "children": [
+          {
+            "code": "224",
+            "label": "Children's Health"
+          },
+          {
+            "code": "225",
+            "label": "Fitness and Exercise",
+            "children": [
+              {
+                "code": "226",
+                "label": "Participant Sports"
+              },
+              {
+                "code": "227",
+                "label": "Running and Jogging"
+              }
+            ]
+          },
+          {
+            "code": "228",
+            "label": "Men's Health"
+          },
+          {
+            "code": "229",
+            "label": "Nutrition"
+          },
+          {
+            "code": "230",
+            "label": "Senior Health"
+          },
+          {
+            "code": "231",
+            "label": "Weight Loss"
+          },
+          {
+            "code": "232",
+            "label": "Wellness",
+            "children": [
+              {
+                "code": "233",
+                "label": "Alternative Medicine",
+                "children": [
+                  {
+                    "code": "234",
+                    "label": "Herbs and Supplements"
+                  },
+                  {
+                    "code": "235",
+                    "label": "Holistic Health"
+                  }
+                ]
+              },
+              {
+                "code": "236",
+                "label": "Physical Therapy"
+              },
+              {
+                "code": "237",
+                "label": "Smoking Cessation"
+              }
+            ]
+          },
+          {
+            "code": "238",
+            "label": "Women's Health"
+          }
+        ]
+      },
+      {
+        "code": "239",
+        "label": "Hobbies and Interests",
+        "children": [
+          {
+            "code": "240",
+            "label": "Antiquing and Antiques"
+          },
+          {
+            "code": "248",
+            "label": "Arts and Crafts",
+            "children": [
+              {
+                "code": "249",
+                "label": "Beadwork"
+              },
+              {
+                "code": "250",
+                "label": "Candle and Soap Making"
+              },
+              {
+                "code": "251",
+                "label": "Drawing and Sketching"
+              },
+              {
+                "code": "252",
+                "label": "Jewelry Making"
+              },
+              {
+                "code": "253",
+                "label": "Needlework"
+              },
+              {
+                "code": "254",
+                "label": "Painting"
+              },
+              {
+                "code": "255",
+                "label": "Photography"
+              },
+              {
+                "code": "256",
+                "label": "Scrapbooking"
+              },
+              {
+                "code": "257",
+                "label": "Woodworking"
+              }
+            ]
+          },
+          {
+            "code": "258",
+            "label": "Beekeeping"
+          },
+          {
+            "code": "259",
+            "label": "Birdwatching"
+          },
+          {
+            "code": "260",
+            "label": "Cigars"
+          },
+          {
+            "code": "261",
+            "label": "Collecting",
+            "children": [
+              {
+                "code": "262",
+                "label": "Comic Books"
+              },
+              {
+                "code": "263",
+                "label": "Stamps and Coins"
+              }
+            ]
+          },
+          {
+            "code": "264",
+            "label": "Content Production",
+            "children": [
+              {
+                "code": "265",
+                "label": "Audio Production"
+              },
+              {
+                "code": "266",
+                "label": "Freelance Writing"
+              },
+              {
+                "code": "267",
+                "label": "Screenwriting"
+              },
+              {
+                "code": "268",
+                "label": "Video Production"
+              }
+            ]
+          },
+          {
+            "code": "269",
+            "label": "Games and Puzzles",
+            "children": [
+              {
+                "code": "270",
+                "label": "Board Games and Puzzles"
+              },
+              {
+                "code": "271",
+                "label": "Card Games"
+              },
+              {
+                "code": "272",
+                "label": "Roleplaying Games"
+              }
+            ]
+          },
+          {
+            "code": "273",
+            "label": "Genealogy and Ancestry"
+          },
+          {
+            "code": "241",
+            "label": "Magic and Illusion"
+          },
+          {
+            "code": "242",
+            "label": "Model Toys"
+          },
+          {
+            "code": "243",
+            "label": "Musical Instruments"
+          },
+          {
+            "code": "244",
+            "label": "Paranormal Phenomena"
+          },
+          {
+            "code": "245",
+            "label": "Radio Control"
+          },
+          {
+            "code": "246",
+            "label": "Sci-fi and Fantasy"
+          },
+          {
+            "code": "247",
+            "label": "Workshops and Classes"
+          }
+        ]
+      },
+      {
+        "code": "1KXCLD",
+        "label": "Holidays",
+        "children": [
+          {
+            "code": "157",
+            "label": "National and Civic Holidays"
+          }
+        ]
+      },
+      {
+        "code": "274",
+        "label": "Home and Garden",
+        "children": [
+          {
+            "code": "275",
+            "label": "Gardening"
+          },
+          {
+            "code": "278",
+            "label": "Home Appliances"
+          },
+          {
+            "code": "279",
+            "label": "Home Entertaining"
+          },
+          {
+            "code": "280",
+            "label": "Home Improvement"
+          },
+          {
+            "code": "281",
+            "label": "Home Security"
+          },
+          {
+            "code": "282",
+            "label": "Indoor Environmental Quality"
+          },
+          {
+            "code": "283",
+            "label": "Interior Decorating"
+          },
+          {
+            "code": "284",
+            "label": "Landscaping"
+          },
+          {
+            "code": "285",
+            "label": "Outdoor Decorating"
+          },
+          {
+            "code": "276",
+            "label": "Remodeling and Construction"
+          },
+          {
+            "code": "277",
+            "label": "Smart Home"
+          }
+        ]
+      },
+      {
+        "code": "383",
+        "label": "Law"
+      },
+      {
+        "code": "286",
+        "label": "Medical Health",
+        "children": [
+          {
+            "code": "323",
+            "label": "Cosmetic Medical Services"
+          },
+          {
+            "code": "287",
+            "label": "Diseases and Conditions",
+            "children": [
+              {
+                "code": "288",
+                "label": "Allergies"
+              },
+              {
+                "code": "306",
+                "label": "Blood Disorders"
+              },
+              {
+                "code": "312",
+                "label": "Bone and Joint Conditions"
+              },
+              {
+                "code": "313",
+                "label": "Brain and Nervous System Disorders"
+              },
+              {
+                "code": "314",
+                "label": "Cancer"
+              },
+              {
+                "code": "315",
+                "label": "Cold and Flu"
+              },
+              {
+                "code": "316",
+                "label": "Dental Health"
+              },
+              {
+                "code": "317",
+                "label": "Diabetes"
+              },
+              {
+                "code": "318",
+                "label": "Digestive Disorders"
+              },
+              {
+                "code": "289",
+                "label": "Ear, Nose and Throat Conditions"
+              },
+              {
+                "code": "290",
+                "label": "Endocrine and Metabolic Diseases",
+                "children": [
+                  {
+                    "code": "291",
+                    "label": "Hormonal Disorders"
+                  },
+                  {
+                    "code": "292",
+                    "label": "Menopause"
+                  },
+                  {
+                    "code": "293",
+                    "label": "Thyroid Disorders"
+                  }
+                ]
+              },
+              {
+                "code": "294",
+                "label": "Eye and Vision Conditions"
+              },
+              {
+                "code": "295",
+                "label": "Foot Health"
+              },
+              {
+                "code": "296",
+                "label": "Heart and Cardiovascular Diseases"
+              },
+              {
+                "code": "297",
+                "label": "Infectious Diseases"
+              },
+              {
+                "code": "298",
+                "label": "Injuries",
+                "children": [
+                  {
+                    "code": "299",
+                    "label": "First Aid"
+                  }
+                ]
+              },
+              {
+                "code": "300",
+                "label": "Lung and Respiratory Health"
+              },
+              {
+                "code": "301",
+                "label": "Mental Health"
+              },
+              {
+                "code": "302",
+                "label": "Reproductive Health",
+                "children": [
+                  {
+                    "code": "303",
+                    "label": "Birth Control"
+                  },
+                  {
+                    "code": "304",
+                    "label": "Infertility"
+                  },
+                  {
+                    "code": "305",
+                    "label": "Pregnancy"
+                  }
+                ]
+              },
+              {
+                "code": "307",
+                "label": "Sexual Health",
+                "children": [
+                  {
+                    "code": "308",
+                    "label": "Sexual Conditions"
+                  }
+                ]
+              },
+              {
+                "code": "309",
+                "label": "Skin and Dermatology"
+              },
+              {
+                "code": "310",
+                "label": "Sleep Disorders"
+              },
+              {
+                "code": "311",
+                "label": "Substance Abuse"
+              }
+            ]
+          },
+          {
+            "code": "319",
+            "label": "Medical Tests"
+          },
+          {
+            "code": "320",
+            "label": "Pharmaceutical Drugs"
+          },
+          {
+            "code": "321",
+            "label": "Surgery"
+          },
+          {
+            "code": "322",
+            "label": "Vaccines"
+          }
+        ]
+      },
+      {
+        "code": "163",
+        "label": "Personal Celebrations and Life Events",
+        "children": [
+          {
+            "code": "164",
+            "label": "Anniversary"
+          },
+          {
+            "code": "166",
+            "label": "Baby Shower"
+          },
+          {
+            "code": "167",
+            "label": "Bachelor Party"
+          },
+          {
+            "code": "168",
+            "label": "Bachelorette Party"
+          },
+          {
+            "code": "169",
+            "label": "Birth"
+          },
+          {
+            "code": "170",
+            "label": "Birthday"
+          },
+          {
+            "code": "171",
+            "label": "Funeral"
+          },
+          {
+            "code": "172",
+            "label": "Graduation"
+          },
+          {
+            "code": "173",
+            "label": "Prom"
+          },
+          {
+            "code": "165",
+            "label": "Wedding"
+          }
+        ]
+      },
+      {
+        "code": "391",
+        "label": "Personal Finance",
+        "children": [
+          {
+            "code": "392",
+            "label": "Consumer Banking"
+          },
+          {
+            "code": "393",
+            "label": "Financial Assistance",
+            "children": [
+              {
+                "code": "394",
+                "label": "Government Support and Welfare"
+              },
+              {
+                "code": "395",
+                "label": "Student Financial Aid"
+              }
+            ]
+          },
+          {
+            "code": "396",
+            "label": "Financial Planning"
+          },
+          {
+            "code": "397",
+            "label": "Frugal Living"
+          },
+          {
+            "code": "417",
+            "label": "Home Utilities",
+            "children": [
+              {
+                "code": "418",
+                "label": "Gas and Electric"
+              },
+              {
+                "code": "419",
+                "label": "Internet Service Providers"
+              },
+              {
+                "code": "420",
+                "label": "Phone Services"
+              },
+              {
+                "code": "421",
+                "label": "Water Services"
+              }
+            ]
+          },
+          {
+            "code": "398",
+            "label": "Insurance",
+            "children": [
+              {
+                "code": "399",
+                "label": "Health Insurance"
+              },
+              {
+                "code": "400",
+                "label": "Home Insurance"
+              },
+              {
+                "code": "401",
+                "label": "Life Insurance"
+              },
+              {
+                "code": "402",
+                "label": "Motor Insurance"
+              },
+              {
+                "code": "403",
+                "label": "Pet Insurance"
+              },
+              {
+                "code": "404",
+                "label": "Travel Insurance"
+              }
+            ]
+          },
+          {
+            "code": "405",
+            "label": "Personal Debt",
+            "children": [
+              {
+                "code": "406",
+                "label": "Credit Cards"
+              },
+              {
+                "code": "407",
+                "label": "Home Financing"
+              },
+              {
+                "code": "408",
+                "label": "Personal Loans"
+              },
+              {
+                "code": "409",
+                "label": "Student Loans"
+              }
+            ]
+          },
+          {
+            "code": "410",
+            "label": "Personal Investing",
+            "children": [
+              {
+                "code": "411",
+                "label": "Hedge Funds"
+              },
+              {
+                "code": "412",
+                "label": "Mutual Funds"
+              },
+              {
+                "code": "413",
+                "label": "Options"
+              },
+              {
+                "code": "414",
+                "label": "Stocks and Bonds"
+              }
+            ]
+          },
+          {
+            "code": "415",
+            "label": "Personal Taxes"
+          },
+          {
+            "code": "416",
+            "label": "Retirement Planning"
+          }
+        ]
+      },
+      {
+        "code": "422",
+        "label": "Pets",
+        "children": [
+          {
+            "code": "423",
+            "label": "Birds"
+          },
+          {
+            "code": "424",
+            "label": "Cats"
+          },
+          {
+            "code": "425",
+            "label": "Dogs"
+          },
+          {
+            "code": "426",
+            "label": "Fish and Aquariums"
+          },
+          {
+            "code": "427",
+            "label": "Large Animals"
+          },
+          {
+            "code": "428",
+            "label": "Pet Adoptions"
+          },
+          {
+            "code": "431",
+            "label": "Pet Supplies"
+          },
+          {
+            "code": "429",
+            "label": "Reptiles"
+          },
+          {
+            "code": "430",
+            "label": "Veterinary Medicine"
+          }
+        ]
+      },
+      {
+        "code": "386",
+        "label": "Politics",
+        "children": [
+          {
+            "code": "8YPBBL",
+            "label": "Civic affairs"
+          },
+          {
+            "code": "387",
+            "label": "Elections"
+          },
+          {
+            "code": "388",
+            "label": "Political Issues and Policy"
+          }
+        ]
+      },
+      {
+        "code": "432",
+        "label": "Pop Culture",
+        "children": [
+          {
+            "code": "433",
+            "label": "Celebrity Deaths"
+          },
+          {
+            "code": "434",
+            "label": "Celebrity Families"
+          },
+          {
+            "code": "435",
+            "label": "Celebrity Homes"
+          },
+          {
+            "code": "436",
+            "label": "Celebrity Pregnancy"
+          },
+          {
+            "code": "437",
+            "label": "Celebrity Relationships"
+          },
+          {
+            "code": "438",
+            "label": "Celebrity Scandal"
+          },
+          {
+            "code": "439",
+            "label": "Celebrity Style"
+          },
+          {
+            "code": "440",
+            "label": "Humor and Satire"
+          }
+        ]
+      },
+      {
+        "code": "441",
+        "label": "Real Estate",
+        "children": [
+          {
+            "code": "442",
+            "label": "Apartments"
+          },
+          {
+            "code": "445",
+            "label": "Developmental Sites"
+          },
+          {
+            "code": "446",
+            "label": "Hotel Properties"
+          },
+          {
+            "code": "447",
+            "label": "Houses"
+          },
+          {
+            "code": "448",
+            "label": "Industrial Property"
+          },
+          {
+            "code": "449",
+            "label": "Land and Farms"
+          },
+          {
+            "code": "450",
+            "label": "Office Property"
+          },
+          {
+            "code": "451",
+            "label": "Real Estate Buying and Selling"
+          },
+          {
+            "code": "452",
+            "label": "Real Estate Renting and Leasing"
+          },
+          {
+            "code": "443",
+            "label": "Retail Property"
+          },
+          {
+            "code": "444",
+            "label": "Vacation Properties"
+          }
+        ]
+      },
+      {
+        "code": "453",
+        "label": "Religion and Spirituality",
+        "children": [
+          {
+            "code": "454",
+            "label": "Agnosticism"
+          },
+          {
+            "code": "456",
+            "label": "Astrology"
+          },
+          {
+            "code": "457",
+            "label": "Atheism"
+          },
+          {
+            "code": "458",
+            "label": "Buddhism"
+          },
+          {
+            "code": "459",
+            "label": "Christianity"
+          },
+          {
+            "code": "460",
+            "label": "Hinduism"
+          },
+          {
+            "code": "461",
+            "label": "Islam"
+          },
+          {
+            "code": "462",
+            "label": "Judaism"
+          },
+          {
+            "code": "463",
+            "label": "Sikhism"
+          },
+          {
+            "code": "455",
+            "label": "Spirituality"
+          }
+        ]
+      },
+      {
+        "code": "464",
+        "label": "Science",
+        "children": [
+          {
+            "code": "465",
+            "label": "Biological Sciences"
+          },
+          {
+            "code": "466",
+            "label": "Chemistry"
+          },
+          {
+            "code": "467",
+            "label": "Environment"
+          },
+          {
+            "code": "468",
+            "label": "Genetics"
+          },
+          {
+            "code": "469",
+            "label": "Geography"
+          },
+          {
+            "code": "470",
+            "label": "Geology"
+          },
+          {
+            "code": "471",
+            "label": "Physics"
+          },
+          {
+            "code": "472",
+            "label": "Space and Astronomy"
+          },
+          {
+            "code": "390",
+            "label": "Weather"
+          }
+        ]
+      },
+      {
+        "code": "v9i3On",
+        "label": "Sensitive Topics",
+        "children": [
+          {
+            "code": "Rm3SiT",
+            "label": "Adult and Explicit Sexual Content"
+          },
+          {
+            "code": "avbNf2",
+            "label": "Arms and Ammunition"
+          },
+          {
+            "code": "XtODT3",
+            "label": "Crime and Harmful Acts to Individuals, Society and Human Right Violations"
+          },
+          {
+            "code": "I4GWl6",
+            "label": "Death, Injury, or Military Conflict"
+          },
+          {
+            "code": "Z7rJBM",
+            "label": "Debated Sensitive Social Issues"
+          },
+          {
+            "code": "HxqYV1",
+            "label": "Hate Speech and Acts of Aggression"
+          },
+          {
+            "code": "pg0WhF",
+            "label": "Illegal Drugs, Tobacco, eCigarettes, Vaping, Alcohol"
+          },
+          {
+            "code": "j9PaO9",
+            "label": "Obscenity and Profanity"
+          },
+          {
+            "code": "mm3UXx",
+            "label": "Online Piracy"
+          },
+          {
+            "code": "6i4dB6",
+            "label": "Spam or Harmful Content"
+          },
+          {
+            "code": "8FD8nI",
+            "label": "Terrorism"
+          }
+        ]
+      },
+      {
+        "code": "473",
+        "label": "Shopping",
+        "children": [
+          {
+            "code": "482",
+            "label": "Children's Games and Toys"
+          },
+          {
+            "code": "474",
+            "label": "Coupons and Discounts"
+          },
+          {
+            "code": "475",
+            "label": "Flower Shopping"
+          },
+          {
+            "code": "476",
+            "label": "Gifts and Greetings Cards"
+          },
+          {
+            "code": "477",
+            "label": "Grocery Shopping"
+          },
+          {
+            "code": "478",
+            "label": "Holiday Shopping"
+          },
+          {
+            "code": "479",
+            "label": "Household Supplies"
+          },
+          {
+            "code": "480",
+            "label": "Lotteries and Scratchcards"
+          },
+          {
+            "code": "161",
+            "label": "Party Supplies and Decorations"
+          },
+          {
+            "code": "481",
+            "label": "Sales and Promotions"
+          }
+        ]
+      },
+      {
+        "code": "483",
+        "label": "Sports",
+        "children": [
+          {
+            "code": "484",
+            "label": "American Football"
+          },
+          {
+            "code": "507",
+            "label": "Australian Rules Football"
+          },
+          {
+            "code": "518",
+            "label": "Auto Racing",
+            "children": [
+              {
+                "code": "519",
+                "label": "Motorcycle Sports"
+              }
+            ]
+          },
+          {
+            "code": "534",
+            "label": "Badminton"
+          },
+          {
+            "code": "545",
+            "label": "Baseball"
+          },
+          {
+            "code": "547",
+            "label": "Basketball"
+          },
+          {
+            "code": "548",
+            "label": "Beach Volleyball"
+          },
+          {
+            "code": "549",
+            "label": "Bodybuilding"
+          },
+          {
+            "code": "550",
+            "label": "Bowling"
+          },
+          {
+            "code": "485",
+            "label": "Boxing"
+          },
+          {
+            "code": "486",
+            "label": "Cheerleading"
+          },
+          {
+            "code": "487",
+            "label": "College Sports",
+            "children": [
+              {
+                "code": "490",
+                "label": "College Baseball"
+              },
+              {
+                "code": "489",
+                "label": "College Basketball"
+              },
+              {
+                "code": "488",
+                "label": "College Football"
+              }
+            ]
+          },
+          {
+            "code": "491",
+            "label": "Cricket"
+          },
+          {
+            "code": "492",
+            "label": "Cycling"
+          },
+          {
+            "code": "493",
+            "label": "Darts"
+          },
+          {
+            "code": "494",
+            "label": "Disabled Sports"
+          },
+          {
+            "code": "495",
+            "label": "Diving"
+          },
+          {
+            "code": "496",
+            "label": "Equine Sports"
+          },
+          {
+            "code": "497",
+            "label": "Horse Racing"
+          },
+          {
+            "code": "498",
+            "label": "Extreme Sports",
+            "children": [
+              {
+                "code": "499",
+                "label": "Canoeing and Kayaking"
+              },
+              {
+                "code": "500",
+                "label": "Climbing"
+              },
+              {
+                "code": "501",
+                "label": "Paintball"
+              },
+              {
+                "code": "502",
+                "label": "Scuba Diving"
+              },
+              {
+                "code": "503",
+                "label": "Skateboarding"
+              },
+              {
+                "code": "504",
+                "label": "Snowboarding"
+              },
+              {
+                "code": "505",
+                "label": "Surfing and Bodyboarding"
+              },
+              {
+                "code": "506",
+                "label": "Waterskiing and Wakeboarding"
+              }
+            ]
+          },
+          {
+            "code": "508",
+            "label": "Fantasy Sports"
+          },
+          {
+            "code": "509",
+            "label": "Field Hockey"
+          },
+          {
+            "code": "510",
+            "label": "Figure Skating"
+          },
+          {
+            "code": "511",
+            "label": "Fishing Sports"
+          },
+          {
+            "code": "512",
+            "label": "Golf"
+          },
+          {
+            "code": "513",
+            "label": "Gymnastics"
+          },
+          {
+            "code": "514",
+            "label": "Hunting and Shooting"
+          },
+          {
+            "code": "515",
+            "label": "Ice Hockey"
+          },
+          {
+            "code": "516",
+            "label": "Inline Skating"
+          },
+          {
+            "code": "517",
+            "label": "Lacrosse"
+          },
+          {
+            "code": "520",
+            "label": "Martial Arts"
+          },
+          {
+            "code": "521",
+            "label": "Olympic Sports",
+            "children": [
+              {
+                "code": "522",
+                "label": "Summer Olympic Sports"
+              },
+              {
+                "code": "523",
+                "label": "Winter Olympic Sports"
+              }
+            ]
+          },
+          {
+            "code": "524",
+            "label": "Poker and Professional Gambling"
+          },
+          {
+            "code": "525",
+            "label": "Rodeo"
+          },
+          {
+            "code": "526",
+            "label": "Rowing"
+          },
+          {
+            "code": "527",
+            "label": "Rugby",
+            "children": [
+              {
+                "code": "528",
+                "label": "Rugby League"
+              },
+              {
+                "code": "529",
+                "label": "Rugby Union"
+              }
+            ]
+          },
+          {
+            "code": "530",
+            "label": "Sailing"
+          },
+          {
+            "code": "531",
+            "label": "Skiing"
+          },
+          {
+            "code": "532",
+            "label": "Snooker Pool Billiards"
+          },
+          {
+            "code": "533",
+            "label": "Soccer"
+          },
+          {
+            "code": "535",
+            "label": "Softball"
+          },
+          {
+            "code": "551",
+            "label": "Sports Equipment"
+          },
+          {
+            "code": "536",
+            "label": "Squash"
+          },
+          {
+            "code": "537",
+            "label": "Swimming"
+          },
+          {
+            "code": "538",
+            "label": "Table Tennis"
+          },
+          {
+            "code": "539",
+            "label": "Tennis"
+          },
+          {
+            "code": "540",
+            "label": "Track and Field"
+          },
+          {
+            "code": "541",
+            "label": "Volleyball"
+          },
+          {
+            "code": "542",
+            "label": "Walking"
+          },
+          {
+            "code": "543",
+            "label": "Water Polo"
+          },
+          {
+            "code": "544",
+            "label": "Weightlifting"
+          },
+          {
+            "code": "546",
+            "label": "Wrestling"
+          }
+        ]
+      },
+      {
+        "code": "552",
+        "label": "Style and Fashion",
+        "children": [
+          {
+            "code": "553",
+            "label": "Beauty",
+            "children": [
+              {
+                "code": "554",
+                "label": "Hair Care"
+              },
+              {
+                "code": "555",
+                "label": "Makeup and Accessories"
+              },
+              {
+                "code": "556",
+                "label": "Nail Care"
+              },
+              {
+                "code": "557",
+                "label": "Natural and Organic Beauty"
+              },
+              {
+                "code": "558",
+                "label": "Perfume and Fragrance"
+              },
+              {
+                "code": "559",
+                "label": "Skin Care"
+              }
+            ]
+          },
+          {
+            "code": "574",
+            "label": "Body Art"
+          },
+          {
+            "code": "575",
+            "label": "Children's Clothing"
+          },
+          {
+            "code": "576",
+            "label": "Designer Clothing"
+          },
+          {
+            "code": "577",
+            "label": "Fashion Trends"
+          },
+          {
+            "code": "578",
+            "label": "High Fashion"
+          },
+          {
+            "code": "579",
+            "label": "Men's Fashion",
+            "children": [
+              {
+                "code": "580",
+                "label": "Men's Accessories",
+                "children": [
+                  {
+                    "code": "581",
+                    "label": "Men's Jewelry and Watches"
+                  }
+                ]
+              },
+              {
+                "code": "582",
+                "label": "Men's Clothing",
+                "children": [
+                  {
+                    "code": "583",
+                    "label": "Men's Business Wear"
+                  },
+                  {
+                    "code": "584",
+                    "label": "Men's Casual Wear"
+                  },
+                  {
+                    "code": "585",
+                    "label": "Men's Formal Wear"
+                  },
+                  {
+                    "code": "586",
+                    "label": "Men's Outerwear"
+                  },
+                  {
+                    "code": "587",
+                    "label": "Men's Sportswear"
+                  },
+                  {
+                    "code": "588",
+                    "label": "Men's Underwear and Sleepwear"
+                  }
+                ]
+              },
+              {
+                "code": "589",
+                "label": "Men's Shoes and Footwear"
+              }
+            ]
+          },
+          {
+            "code": "590",
+            "label": "Personal Care",
+            "children": [
+              {
+                "code": "591",
+                "label": "Bath and Shower"
+              },
+              {
+                "code": "592",
+                "label": "Deodorant and Antiperspirant"
+              },
+              {
+                "code": "593",
+                "label": "Oral care"
+              },
+              {
+                "code": "594",
+                "label": "Shaving"
+              }
+            ]
+          },
+          {
+            "code": "595",
+            "label": "Street Style"
+          },
+          {
+            "code": "560",
+            "label": "Women's Fashion",
+            "children": [
+              {
+                "code": "561",
+                "label": "Women's Accessories",
+                "children": [
+                  {
+                    "code": "562",
+                    "label": "Women's Glasses"
+                  },
+                  {
+                    "code": "563",
+                    "label": "Women's Handbags and Wallets"
+                  },
+                  {
+                    "code": "564",
+                    "label": "Women's Hats and Scarves"
+                  },
+                  {
+                    "code": "565",
+                    "label": "Women's Jewelry and Watches"
+                  }
+                ]
+              },
+              {
+                "code": "566",
+                "label": "Women's Clothing",
+                "children": [
+                  {
+                    "code": "567",
+                    "label": "Women's Business Wear"
+                  },
+                  {
+                    "code": "568",
+                    "label": "Women's Casual Wear"
+                  },
+                  {
+                    "code": "569",
+                    "label": "Women's Formal Wear"
+                  },
+                  {
+                    "code": "570",
+                    "label": "Women's Intimates and Sleepwear"
+                  },
+                  {
+                    "code": "571",
+                    "label": "Women's Outerwear"
+                  },
+                  {
+                    "code": "572",
+                    "label": "Women's Sportswear"
+                  }
+                ]
+              },
+              {
+                "code": "573",
+                "label": "Women's Shoes and Footwear"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "code": "596",
+        "label": "Technology and Computing",
+        "children": [
+          {
+            "code": "597",
+            "label": "Artificial Intelligence"
+          },
+          {
+            "code": "598",
+            "label": "Augmented Reality"
+          },
+          {
+            "code": "599",
+            "label": "Computing",
+            "children": [
+              {
+                "code": "600",
+                "label": "Computer Networking"
+              },
+              {
+                "code": "601",
+                "label": "Computer Peripherals"
+              },
+              {
+                "code": "602",
+                "label": "Computer Software and Applications",
+                "children": [
+                  {
+                    "code": "W3CW2J",
+                    "label": "Productivity"
+                  },
+                  {
+                    "code": "603",
+                    "label": "3-D Graphics"
+                  },
+                  {
+                    "code": "608",
+                    "label": "Antivirus Software"
+                  },
+                  {
+                    "code": "609",
+                    "label": "Browsers"
+                  },
+                  {
+                    "code": "610",
+                    "label": "Computer Animation"
+                  },
+                  {
+                    "code": "611",
+                    "label": "Databases"
+                  },
+                  {
+                    "code": "612",
+                    "label": "Desktop Publishing"
+                  },
+                  {
+                    "code": "613",
+                    "label": "Digital Audio"
+                  },
+                  {
+                    "code": "WQC6HR",
+                    "label": "Maps and Navigation"
+                  },
+                  {
+                    "code": "614",
+                    "label": "Graphics Software"
+                  },
+                  {
+                    "code": "615",
+                    "label": "Operating Systems"
+                  },
+                  {
+                    "code": "604",
+                    "label": "Photo Editing Software"
+                  },
+                  {
+                    "code": "605",
+                    "label": "Shareware and Freeware"
+                  },
+                  {
+                    "code": "606",
+                    "label": "Video Software"
+                  },
+                  {
+                    "code": "607",
+                    "label": "Web Conferencing"
+                  }
+                ]
+              },
+              {
+                "code": "616",
+                "label": "Data Storage and Warehousing"
+              },
+              {
+                "code": "617",
+                "label": "Desktops"
+              },
+              {
+                "code": "618",
+                "label": "Information and Network Security"
+              },
+              {
+                "code": "619",
+                "label": "Internet",
+                "children": [
+                  {
+                    "code": "620",
+                    "label": "Cloud Computing"
+                  },
+                  {
+                    "code": "623",
+                    "label": "Email"
+                  },
+                  {
+                    "code": "624",
+                    "label": "Internet for Beginners"
+                  },
+                  {
+                    "code": "625",
+                    "label": "Internet of Things"
+                  },
+                  {
+                    "code": "626",
+                    "label": "IT and Internet Support"
+                  },
+                  {
+                    "code": "627",
+                    "label": "Search"
+                  },
+                  {
+                    "code": "628",
+                    "label": "Social Networking"
+                  },
+                  {
+                    "code": "629",
+                    "label": "Web Design and HTML"
+                  },
+                  {
+                    "code": "621",
+                    "label": "Web Development"
+                  },
+                  {
+                    "code": "622",
+                    "label": "Web Hosting"
+                  }
+                ]
+              },
+              {
+                "code": "630",
+                "label": "Laptops"
+              },
+              {
+                "code": "631",
+                "label": "Programming Languages"
+              }
+            ]
+          },
+          {
+            "code": "632",
+            "label": "Consumer Electronics",
+            "children": [
+              {
+                "code": "633",
+                "label": "Cameras and Camcorders"
+              },
+              {
+                "code": "634",
+                "label": "Home Entertainment Systems"
+              },
+              {
+                "code": "635",
+                "label": "Smartphones"
+              },
+              {
+                "code": "636",
+                "label": "Tablets and E-readers"
+              },
+              {
+                "code": "637",
+                "label": "Wearable Technology"
+              }
+            ]
+          },
+          {
+            "code": "638",
+            "label": "Robotics"
+          },
+          {
+            "code": "639",
+            "label": "Virtual Reality"
+          }
+        ]
+      },
+      {
+        "code": "653",
+        "label": "Travel",
+        "children": [
+          {
+            "code": "654",
+            "label": "Travel Accessories"
+          },
+          {
+            "code": "655",
+            "label": "Travel Locations",
+            "children": [
+              {
+                "code": "656",
+                "label": "Africa Travel"
+              },
+              {
+                "code": "657",
+                "label": "Asia Travel"
+              },
+              {
+                "code": "658",
+                "label": "Australia and Oceania Travel"
+              },
+              {
+                "code": "659",
+                "label": "Europe Travel"
+              },
+              {
+                "code": "660",
+                "label": "North America Travel"
+              },
+              {
+                "code": "661",
+                "label": "Polar Travel"
+              },
+              {
+                "code": "662",
+                "label": "South America Travel"
+              }
+            ]
+          },
+          {
+            "code": "663",
+            "label": "Travel Preparation and Advice"
+          },
+          {
+            "code": "664",
+            "label": "Travel Type",
+            "children": [
+              {
+                "code": "665",
+                "label": "Adventure Travel"
+              },
+              {
+                "code": "672",
+                "label": "Air Travel"
+              },
+              {
+                "code": "673",
+                "label": "Beach Travel"
+              },
+              {
+                "code": "674",
+                "label": "Bed and Breakfasts"
+              },
+              {
+                "code": "675",
+                "label": "Budget Travel"
+              },
+              {
+                "code": "676",
+                "label": "Business Travel"
+              },
+              {
+                "code": "677",
+                "label": "Camping"
+              },
+              {
+                "code": "678",
+                "label": "Cruises"
+              },
+              {
+                "code": "679",
+                "label": "Day Trips"
+              },
+              {
+                "code": "666",
+                "label": "Family Travel"
+              },
+              {
+                "code": "667",
+                "label": "Honeymoons and Getaways"
+              },
+              {
+                "code": "668",
+                "label": "Hotels and Motels"
+              },
+              {
+                "code": "669",
+                "label": "Rail Travel"
+              },
+              {
+                "code": "670",
+                "label": "Road Trips"
+              },
+              {
+                "code": "671",
+                "label": "Spas"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "code": "680",
+        "label": "Video Gaming",
+        "children": [
+          {
+            "code": "681",
+            "label": "Console Games"
+          },
+          {
+            "code": "682",
+            "label": "eSports"
+          },
+          {
+            "code": "683",
+            "label": "Mobile Games"
+          },
+          {
+            "code": "684",
+            "label": "PC Games"
+          },
+          {
+            "code": "685",
+            "label": "Video Game Genres",
+            "children": [
+              {
+                "code": "686",
+                "label": "Action Video Games"
+              },
+              {
+                "code": "691",
+                "label": "Action-Adventure Video Games"
+              },
+              {
+                "code": "MQ2XML",
+                "label": "Adult Video Games"
+              },
+              {
+                "code": "692",
+                "label": "Adventure Video Games"
+              },
+              {
+                "code": "ZJG29S",
+                "label": "Casino and Gambling Video Games"
+              },
+              {
+                "code": "693",
+                "label": "Casual Games"
+              },
+              {
+                "code": "694",
+                "label": "Educational Video Games"
+              },
+              {
+                "code": "695",
+                "label": "Exercise and Fitness Video Games"
+              },
+              {
+                "code": "VWGKS7",
+                "label": "Family Video Games"
+              },
+              {
+                "code": "II436J",
+                "label": "Horror Video Games"
+              },
+              {
+                "code": "696",
+                "label": "MMOs"
+              },
+              {
+                "code": "697",
+                "label": "Music and Party Video Games"
+              },
+              {
+                "code": "698",
+                "label": "Puzzle Video Games"
+              },
+              {
+                "code": "VK7KD0",
+                "label": "Racing Video Games"
+              },
+              {
+                "code": "687",
+                "label": "Role-Playing Video Games"
+              },
+              {
+                "code": "688",
+                "label": "Simulation Video Games"
+              },
+              {
+                "code": "689",
+                "label": "Sports Video Games"
+              },
+              {
+                "code": "690",
+                "label": "Strategy Video Games"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "code": "389",
+        "label": "War and Conflicts"
+      }
+    ]
+  }
+}
