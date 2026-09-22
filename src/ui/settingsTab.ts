@@ -5,10 +5,13 @@ import { DEFAULT_API_SERVER_URL, parseDepthSetting } from '../settings';
 import { METHOD_DISPLAY_NAMES } from '../taxonomy/types';
 import type { CategorizationMethod } from '../taxonomy/types';
 import { parseFolderSetting } from '../vault/mover';
+import { CustomEntriesSection } from './customEntriesSection';
 import { FolderSuggest } from './folderSuggest';
 import { parseThreshold } from './rowState';
 
 export class NoteFilerSettingTab extends PluginSettingTab {
+	private customEntriesSection: CustomEntriesSection | null = null;
+
 	constructor(
 		app: App,
 		private readonly plugin: NoteFilerPlugin,
@@ -25,6 +28,7 @@ export class NoteFilerSettingTab extends PluginSettingTab {
 		this.addMethod(containerEl);
 		this.addDepth(containerEl);
 		this.addThreshold(containerEl);
+		this.addCustomEntries(containerEl);
 	}
 
 	private async save(): Promise<void> {
@@ -112,6 +116,7 @@ export class NoteFilerSettingTab extends PluginSettingTab {
 				dropdown.setValue(this.plugin.settings.categorizationMethod).onChange(async (value) => {
 					this.plugin.settings.categorizationMethod = value as CategorizationMethod;
 					await this.save();
+					this.customEntriesSection?.setMethod(this.plugin.settings.categorizationMethod);
 				});
 			});
 	}
@@ -165,6 +170,24 @@ export class NoteFilerSettingTab extends PluginSettingTab {
 					},
 				);
 			});
+	}
+
+	private addCustomEntries(containerEl: HTMLElement): void {
+		new Setting(containerEl).setName('Custom categories').setHeading();
+		new Setting(containerEl).setDesc(
+			'Add your own categories on top of the preset taxonomy, placed wherever you like in its hierarchy.',
+		);
+		this.customEntriesSection = new CustomEntriesSection(
+			containerEl,
+			{
+				getEntries: () => this.plugin.settings.customEntries,
+				setEntries: async (entries) => {
+					this.plugin.settings.customEntries = entries;
+					await this.save();
+				},
+			},
+			this.plugin.settings.categorizationMethod,
+		);
 	}
 
 	/**

@@ -183,3 +183,84 @@
 input.note-filer-invalid {
 	border-color: var(--text-error);
 }
+
+.note-filer-custom-entries {
+	margin-top: var(--size-4-2);
+}
+
+.note-filer-custom-entries-list {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: var(--radius-m);
+	margin-bottom: var(--size-4-2);
+}
+
+.note-filer-custom-entry-empty {
+	padding: var(--size-4-2) var(--size-4-3);
+	color: var(--text-muted);
+	font-size: var(--font-ui-small);
+}
+
+.note-filer-custom-entry-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--size-4-3);
+	padding: var(--size-4-2) var(--size-4-3);
+	border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.note-filer-custom-entry-row:last-child {
+	border-bottom: none;
+}
+
+.note-filer-custom-entry-info {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-2-1);
+	min-width: 0;
+}
+
+.note-filer-custom-entry-label {
+	font-weight: var(--font-semibold);
+}
+
+.note-filer-custom-entry-parent {
+	color: var(--text-muted);
+	font-size: var(--font-ui-small);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.note-filer-custom-entry-form {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-4-1);
+	padding: var(--size-4-3);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: var(--radius-m);
+}
+
+.note-filer-custom-entry-form-label {
+	color: var(--text-muted);
+	font-size: var(--font-ui-small);
+}
+
+.note-filer-parent-picker {
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-2-1);
+}
+
+.note-filer-custom-entry-error {
+	color: var(--text-error);
+	font-size: var(--font-ui-small);
+	min-height: 1.2em;
+}
+
+.note-filer-custom-entry-actions {
+	display: flex;
+	gap: var(--size-4-2);
+}

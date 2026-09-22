@@ -32,3 +32,22 @@ export function nodesAtDepth(taxonomy: Taxonomy, depth: number): LevelEntry[] {
 export function pathLabel(entry: LevelEntry): string {
 	return [...entry.parents.map((parent) => parent.label), entry.node.label].join(PATH_SEPARATOR);
 }
+
+/** Finds the category with `code` and the categories above it (top level first), or null if there is none. */
+export function findByCode(taxonomy: Taxonomy, code: string): LevelEntry | null {
+	const walk = (nodes: TaxonomyNode[], parents: CategoryRef[]): LevelEntry | null => {
+		for (const node of nodes) {
+			if (node.code === code) {
+				return { node, parents };
+			}
+			if (node.children) {
+				const found = walk(node.children, [...parents, { code: node.code, label: node.label }]);
+				if (found) {
+					return found;
+				}
+			}
+		}
+		return null;
+	};
+	return walk(taxonomy.root.children, []);
+}

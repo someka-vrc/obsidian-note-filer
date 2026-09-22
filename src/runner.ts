@@ -59,7 +59,7 @@ export class CategorizeRunner {
 		const client = new JevClient({ url: settings.apiServerUrl, apiKey, transport: obsidianTransport });
 		const options = {
 			method: settings.categorizationMethod,
-			taxonomy: loadTaxonomy(settings.categorizationMethod),
+			taxonomy: loadTaxonomy(settings.categorizationMethod, settings.customEntries),
 			depth: settings.categorizationDepth,
 		};
 

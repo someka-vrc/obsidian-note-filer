@@ -1,4 +1,4 @@
-import type { CategorizationMethod } from './taxonomy/types';
+import type { CategorizationMethod, CustomTaxonomyEntry } from './taxonomy/types';
 
 export interface NoteFilerSettings {
 	apiServerUrl: string;
@@ -9,6 +9,8 @@ export interface NoteFilerSettings {
 	/** How many levels to categorize; 0 means no limit. */
 	categorizationDepth: number;
 	confidenceThreshold: number;
+	/** Categories the user added on top of the preset taxonomies. */
+	customEntries: CustomTaxonomyEntry[];
 }
 
 /**
@@ -36,4 +38,5 @@ export const DEFAULT_SETTINGS: NoteFilerSettings = {
 	categorizationMethod: 'thema',
 	categorizationDepth: 2,
 	confidenceThreshold: 0.4,
+	customEntries: [],
 };

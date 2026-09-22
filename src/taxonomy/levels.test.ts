@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { loadTaxonomy } from './index';
-import { nodesAtDepth, pathLabel } from './levels';
+import { findByCode, nodesAtDepth, pathLabel } from './levels';
 import type { Taxonomy } from './types';
 
 const taxonomy: Taxonomy = {
@@ -49,5 +49,25 @@ describe('pathLabel', () => {
 		const [first] = nodesAtDepth(taxonomy, 3);
 		expect(first && pathLabel(first)).toBe('Arts > Theory');
 		expect(pathLabel({ node: { code: 'B', label: 'Business' }, parents: [] })).toBe('Business');
+	});
+});
+
+describe('findByCode', () => {
+	it('finds a top-level category with no parents', () => {
+		expect(findByCode(taxonomy, 'B')).toEqual({ node: { code: 'B', label: 'Business' }, parents: [] });
+	});
+
+	it('finds a nested category with its parent chain', () => {
+		expect(findByCode(taxonomy, 'ACA')).toEqual({
+			node: { code: 'ACA', label: 'Oil' },
+			parents: [
+				{ code: 'A', label: 'Arts' },
+				{ code: 'AC', label: 'Painting' },
+			],
+		});
+	});
+
+	it('returns null for a code that is not in the taxonomy', () => {
+		expect(findByCode(taxonomy, 'ZZZ')).toBeNull();
 	});
 });
