@@ -1,6 +1,13 @@
 import { describe, expect, it, vi } from 'vitest';
 import { CancelledError } from './cancel';
-import { JevApiError, JevClient, type HttpRequest, type HttpResponse } from './jevClient';
+import {
+	CachingJevAsker,
+	JevAnswerCache,
+	JevApiError,
+	JevClient,
+	type HttpRequest,
+	type HttpResponse,
+} from './jevClient';
 import type { JevChoiceQuestion } from './questions';
 
 const questions: Record<string, JevChoiceQuestion> = {
@@ -116,5 +123,40 @@ describe('JevClient', () => {
 
 		await expect(jev.ask({}, questions, controller.signal)).rejects.toBeInstanceOf(CancelledError);
 		expect(transport).not.toHaveBeenCalled();
+	});
+});
+
+describe('CachingJevAsker', () => {
+	it('answers a repeated request from the cache without calling the inner asker again', async () => {
+		const inner = { ask: vi.fn(() => Promise.resolve({ q0: { choice: 'A', probabilities: { A: 1 }, confidence: 1 } })) };
+		const asker = new CachingJevAsker(inner, new JevAnswerCache());
+
+		const first = await asker.ask({ title: 't' }, questions);
+		const second = await asker.ask({ title: 't' }, questions);
+
+		expect(inner.ask).toHaveBeenCalledTimes(1);
+		expect(second).toEqual(first);
+	});
+
+	it('calls the inner asker again for a different request', async () => {
+		const inner = { ask: vi.fn(() => Promise.resolve({ q0: { choice: 'A', probabilities: { A: 1 }, confidence: 1 } })) };
+		const asker = new CachingJevAsker(inner, new JevAnswerCache());
+
+		await asker.ask({ title: 't1' }, questions);
+		await asker.ask({ title: 't2' }, questions);
+
+		expect(inner.ask).toHaveBeenCalledTimes(2);
+	});
+
+	it('evicts the least recently used entry once the size budget is exceeded', async () => {
+		const inner = { ask: vi.fn(() => Promise.resolve({ q0: { choice: 'A', probabilities: { A: 1 }, confidence: 1 } })) };
+		const cache = new JevAnswerCache(1);
+		const asker = new CachingJevAsker(inner, cache);
+
+		await asker.ask({ title: 't1' }, questions);
+		await asker.ask({ title: 't2' }, questions);
+		await asker.ask({ title: 't1' }, questions);
+
+		expect(inner.ask).toHaveBeenCalledTimes(3);
 	});
 });

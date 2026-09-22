@@ -111,6 +111,82 @@ function errorForResponse(response: HttpResponse): JevApiError {
 	return new JevApiError(`HTTP ${response.status}: ${response.text.slice(0, 200)}`, response.status);
 }
 
+/**
+ * Total size, in characters, of cached keys and serialized answers a {@link JevAnswerCache} keeps
+ * before evicting the least recently used entries. Sized in characters rather than entry count
+ * because note bodies vary wildly in length; 5,000,000 chars (~5 MB) comfortably holds several
+ * thousand notes' worth of requests and answers for the lifetime of the plugin.
+ */
+const DEFAULT_MAX_CACHE_CHARS = 5_000_000;
+
+interface CacheEntry {
+	value: Record<string, JevChoiceAnswer>;
+	size: number;
+}
+
+/**
+ * In-memory LRU store of `ask` answers, keyed by request content. Lives for as long as its owner
+ * keeps it (in practice, the plugin's lifetime), so identical requests within a session are
+ * answered without another API call.
+ */
+export class JevAnswerCache {
+	private readonly entries = new Map<string, CacheEntry>();
+	private totalChars = 0;
+
+	constructor(private readonly maxChars: number = DEFAULT_MAX_CACHE_CHARS) {}
+
+	get(key: string): Record<string, JevChoiceAnswer> | undefined {
+		const entry = this.entries.get(key);
+		if (!entry) {
+			return undefined;
+		}
+		// Refresh recency for LRU eviction.
+		this.entries.delete(key);
+		this.entries.set(key, entry);
+		return entry.value;
+	}
+
+	set(key: string, value: Record<string, JevChoiceAnswer>): void {
+		const size = key.length + JSON.stringify(value).length;
+		this.entries.set(key, { value, size });
+		this.totalChars += size;
+		this.evict();
+	}
+
+	private evict(): void {
+		for (const [key, entry] of this.entries) {
+			if (this.totalChars <= this.maxChars) {
+				break;
+			}
+			this.entries.delete(key);
+			this.totalChars -= entry.size;
+		}
+	}
+}
+
+/** Wraps a `JevAsker`, answering repeated requests for the same state and questions from a `JevAnswerCache`. */
+export class CachingJevAsker implements JevAsker {
+	constructor(
+		private readonly inner: JevAsker,
+		private readonly cache: JevAnswerCache,
+	) {}
+
+	async ask(
+		state: unknown,
+		questions: Record<string, JevChoiceQuestion>,
+		signal?: AbortSignal,
+	): Promise<Record<string, JevChoiceAnswer>> {
+		const key = JSON.stringify({ state, questions });
+		const cached = this.cache.get(key);
+		if (cached) {
+			return cached;
+		}
+		const value = await this.inner.ask(state, questions, signal);
+		this.cache.set(key, value);
+		return value;
+	}
+}
+
 function isRecord(value: unknown): value is Record<string, unknown> {
 	return typeof value === 'object' && value !== null;
 }

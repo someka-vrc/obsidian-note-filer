@@ -1,7 +1,7 @@
 import { Notice, requestUrl, type TFile } from 'obsidian';
 import { CancelledError } from './categorizer/cancel';
 import { categorizeNote } from './categorizer/categorizer';
-import { JevApiError, JevClient, type Transport } from './categorizer/jevClient';
+import { CachingJevAsker, JevAnswerCache, JevApiError, JevClient, type Transport } from './categorizer/jevClient';
 import { extractNoteInput } from './categorizer/noteInput';
 import { mapWithConcurrency } from './categorizer/pool';
 import type NoteFilerPlugin from './main';
@@ -26,6 +26,8 @@ const obsidianTransport: Transport = async (request) => {
 /** Categorizes notes and shows the result. Only one run can be active at a time. */
 export class CategorizeRunner {
 	private controller: AbortController | null = null;
+	/** Survives across runs for the plugin's lifetime, so repeated requests skip the API. */
+	private readonly jevCache = new JevAnswerCache();
 
 	constructor(
 		private readonly plugin: NoteFilerPlugin,
@@ -56,7 +58,10 @@ export class CategorizeRunner {
 
 		const controller = new AbortController();
 		this.controller = controller;
-		const client = new JevClient({ url: settings.apiServerUrl, apiKey, transport: obsidianTransport });
+		const client = new CachingJevAsker(
+			new JevClient({ url: settings.apiServerUrl, apiKey, transport: obsidianTransport }),
+			this.jevCache,
+		);
 		const options = {
 			method: settings.categorizationMethod,
 			taxonomy: loadTaxonomy(settings.categorizationMethod, settings.customEntries),
