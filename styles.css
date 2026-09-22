@@ -89,6 +89,7 @@
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	font-weight: var(--font-semibold);
+	cursor: pointer;
 }
 
 .note-filer-candidate {

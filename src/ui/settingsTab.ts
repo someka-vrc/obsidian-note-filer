@@ -22,6 +22,7 @@ export class NoteFilerSettingTab extends PluginSettingTab {
 	display(): void {
 		const { containerEl } = this;
 		containerEl.empty();
+		this.addHoverPreviewNotice(containerEl);
 		this.addApiServerUrl(containerEl);
 		this.addApiKey(containerEl);
 		this.addCategorizedFolder(containerEl);
@@ -33,6 +34,13 @@ export class NoteFilerSettingTab extends PluginSettingTab {
 
 	private async save(): Promise<void> {
 		await this.plugin.saveSettings();
+	}
+
+	private addHoverPreviewNotice(containerEl: HTMLElement): void {
+		new Setting(containerEl).setDesc(
+			'To preview a note by hovering (Ctrl+hover) its file name in the categorization view, ' +
+				'enable the core "Page preview" plugin, then enable "Note Filer" in its settings.',
+		);
 	}
 
 	private addApiServerUrl(containerEl: HTMLElement): void {

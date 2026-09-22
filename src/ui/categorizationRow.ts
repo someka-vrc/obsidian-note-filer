@@ -1,4 +1,4 @@
-import type { App, TFile } from 'obsidian';
+import type { App, HoverPopover, TFile } from 'obsidian';
 import type { Candidate } from '../categorizer/types';
 import { currentFolder, hasNameConflict } from '../vault/mover';
 import type { CategorizationRow } from './categorizationModal';
@@ -10,6 +10,9 @@ import {
 } from './rowState';
 import type { RowState } from './rowState';
 
+/** Id passed to `Plugin.registerHoverLinkSource` and matched on the `hover-link` event. */
+export const HOVER_LINK_SOURCE = 'note-filer';
+
 export interface RowHandlers {
 	onSkip: (row: CategorizationRowView) => void;
 	onMove: (row: CategorizationRowView) => void;
@@ -20,6 +23,9 @@ export class CategorizationRowView {
 	readonly file: TFile;
 	readonly el: HTMLElement;
 	state: RowState;
+
+	/** Required by Obsidian's `HoverParent` interface for the file name's hover preview. */
+	hoverPopover: HoverPopover | null = null;
 
 	private readonly candidates: Candidate[];
 	private readonly error: string | null;
@@ -51,10 +57,24 @@ export class CategorizationRowView {
 		const bodyEl = this.el.createDiv({ cls: 'note-filer-row-body' });
 
 		const topEl = bodyEl.createDiv({ cls: 'note-filer-row-top' });
-		topEl.createSpan({
-			cls: 'note-filer-file-name',
+		const fileLink = topEl.createEl('a', {
+			cls: 'note-filer-file-name internal-link',
 			text: this.file.name,
-			attr: { title: this.file.path },
+			attr: { href: '#', title: this.file.path, 'data-href': this.file.path },
+		});
+		fileLink.addEventListener('click', (evt) => {
+			evt.preventDefault();
+			void this.app.workspace.getLeaf(false).openFile(this.file);
+		});
+		fileLink.addEventListener('mouseover', (evt) => {
+			this.app.workspace.trigger('hover-link', {
+				event: evt,
+				source: HOVER_LINK_SOURCE,
+				hoverParent: this,
+				targetEl: fileLink,
+				linktext: this.file.path,
+				sourcePath: this.file.path,
+			});
 		});
 		if (this.error === null) {
 			const selectEl = topEl.createEl('select', { cls: 'dropdown note-filer-candidate' });

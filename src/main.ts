@@ -1,6 +1,7 @@
 import { MarkdownView, Notice, Plugin, TFile, TFolder, type Menu, type TAbstractFile } from 'obsidian';
 import { CategorizeRunner } from './runner';
 import { DEFAULT_SETTINGS, NoteFilerSettings } from './settings';
+import { HOVER_LINK_SOURCE } from './ui/categorizationRow';
 import { NoteFilerSettingTab } from './ui/settingsTab';
 import { StatusBarController } from './ui/statusBar';
 import { collectMarkdownFiles } from './vault/collect';
@@ -32,6 +33,11 @@ export default class NoteFilerPlugin extends Plugin {
 		);
 
 		this.addSettingTab(new NoteFilerSettingTab(this.app, this));
+
+		this.registerHoverLinkSource(HOVER_LINK_SOURCE, {
+			display: 'Note Filer',
+			defaultMod: false,
+		});
 	}
 
 	async loadSettings() {
