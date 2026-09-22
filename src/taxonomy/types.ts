@@ -4,6 +4,12 @@ export interface TaxonomyNode {
 	children?: TaxonomyNode[];
 }
 
+/** A category as it is shown to the user and used as a folder name. */
+export interface CategoryRef {
+	code: string;
+	label: string;
+}
+
 export interface Taxonomy {
 	root: { children: TaxonomyNode[] };
 }

@@ -1,19 +1,16 @@
-export interface CategoryRef {
-	code: string;
-	label: string;
-}
+import type { CategoryRef } from '../taxonomy/types';
+
+export type { CategoryRef };
 
 export interface Candidate extends CategoryRef {
-	/** Probability of this category in the last question that was asked, from 0.0 to 1.0. */
+	/** The categories above this one, top level first. The folder is these labels and then this label, nested. */
+	parents: CategoryRef[];
+	/** How likely this category is, from 0.0 to 1.0. */
 	probability: number;
 }
 
-/**
- * The result of categorizing one note.
- * A candidate's folder is `parents` followed by the candidate itself, each level nested by label.
- */
+/** The result of categorizing one note. */
 export interface Categorization {
-	parents: CategoryRef[];
 	/** Up to three candidates, best first. Never contains `Other`. */
 	candidates: Candidate[];
 }

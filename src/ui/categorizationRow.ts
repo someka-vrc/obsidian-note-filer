@@ -22,7 +22,6 @@ export class CategorizationRowView {
 	state: RowState;
 
 	private readonly candidates: Candidate[];
-	private readonly parentLabels: string[];
 	private readonly error: string | null;
 	private readonly folderBefore: string;
 	private selectedIndex = 0;
@@ -42,11 +41,9 @@ export class CategorizationRowView {
 		this.folderBefore = currentFolder(row.file);
 		if (row.outcome.ok) {
 			this.candidates = row.outcome.categorization.candidates.slice(0, 3);
-			this.parentLabels = row.outcome.categorization.parents.map((parent) => parent.label);
 			this.error = this.candidates.length === 0 ? 'No candidates were found.' : null;
 		} else {
 			this.candidates = [];
-			this.parentLabels = [];
 			this.error = row.outcome.error;
 		}
 
@@ -111,18 +108,20 @@ export class CategorizationRowView {
 	}
 
 	private compute(): RowState {
-		const label = this.candidates[this.selectedIndex]?.label ?? null;
+		const selected = this.candidates[this.selectedIndex];
+		const label = selected?.label ?? null;
+		const parentLabels = selected?.parents.map((parent) => parent.label) ?? [];
 		const nameConflict =
 			label !== null &&
 			hasNameConflict(
 				this.app,
 				this.file,
-				resolveDestFolder(this.categorizedFolder, this.parentLabels, label),
+				resolveDestFolder(this.categorizedFolder, parentLabels, label),
 			);
 		return computeRowState({
 			currentFolder: this.folderBefore,
 			categorizedFolder: this.categorizedFolder,
-			parentLabels: this.parentLabels,
+			parentLabels,
 			selectedLabel: label,
 			error: this.error,
 			nameConflict,
